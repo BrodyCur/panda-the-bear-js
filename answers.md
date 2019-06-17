@@ -72,3 +72,43 @@ button.disabled = true
 var bio = document.querySelector('.bio-info')
 
 bio.parentNode.removeChild(bio)
+
+
+
+
+Part 2
+Removing
+1. 
+var timeTravel = document.querySelector('#time-travel').parentNode
+
+timeTravel.parentNode.removeChild(timeTravel)
+
+Adding
+1. 
+var pika = document.querySelector('#right-image').firstElementChild
+
+var clone = pika.cloneNode()
+
+document.querySelector('.portfolio-container').appendChild(clone)
+
+2. 
+var pika = document.querySelector('#right-image').firstElementChild
+
+var clone = pika.cloneNode()
+
+for (i = 0; i < 10; i++){document.querySelector('.portfolio-container').appendChild(clone)}
+
+3. 
+document.querySelector('ul').appendChild(listItem)
+
+const rightSpan = document.createElement('span')
+
+const date = document.createTextNode(Date())
+
+rightSpan.appendChild(date)
+
+listItem.appendChild(rightSpan)
+
+leftSpan.className = 'bio-info-title'
+
+rightSpan2.className = 'bio-info-value'
